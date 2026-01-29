@@ -1,0 +1,299 @@
+/*Home Button*/
+.button-container {
+    display: flex;
+    background-color: #fff;  /* NEU */
+    width: 50px;
+    justify-content: space-around;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(79, 73, 245, 0.31) 5px 10px 15px;
+}
+
+.button {
+    border:none;
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #236C93;    /* NEU */
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 25px;
+}
+
+/* Download button */
+.download {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #236C93;  /* NEU - Farbe */
+    border-radius: 20px;    /* NEU */
+    left: 58em;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #236C93; /* NEU */
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.download:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #236C93;  /* NEU */
+    border-radius: 15px;    /* NEU */
+    z-index: -1;
+}
+
+.download:hover, .download:focus {
+    color: white;
+}
+
+.download:hover:before, .download:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.download:active {
+    transform: scale(0.9);
+}
+.download svg {
+    transition: 0.5s all ease;
+    transform: scale(1.2);
+}
+.download:hover svg {
+    color: white;
+}
+
+/*Antwort Uberprufen Button*/
+
+.pruf_gener_button{
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 1.5em;
+    color: #ffffff;
+    background-color : #236C93;
+    border: 3px solid #236C93;
+    border-radius: 20px;
+    transition: 0.3s ease all;
+}
+
+.pruf_gener_button:hover{
+    background-color: #e9e9ed;
+    color: #236C93;
+}
+
+/* Download Button */
+.pdf_button{
+    background-color: #236C93;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 0.7em 1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    float: right;
+    margin-top: -2.5em;
+
+    text-decoration: none;
+    display: inline-block;
+
+    transition: all 0.3s ease;
+    border: 3px solid #236C93;
+}
+
+.pdf_button:hover{
+    background-color: #e9e9ed;
+    color: #236C93;
+    transform: scale(1.05);
+}
+    /*BarrierFreiheit*/
+#cursorCircle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    background-color: transparent !important;
+}
+
+#menuBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white !important;
+    align-content: center;
+}
+
+#menuBtn img {
+    margin: auto;
+     height: 4rem;
+     width: 4rem;
+ }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    align-content: center;
+    background-color: #d8e5ec;
+    Font-weight: 1000;
+    font-family: "Verdana", sans-serif;
+    color: #236C93;
+    border: 4px solid #b1cbd9;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9998;
+    min-width: 150px;
+}
+
+.menu div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu button {
+    background-color: #ffffff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 1rem;
+    line-height: 29px;
+}
+.menu button:hover {
+    background-color: #f7fafa;
+}
+.menu button:active {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+}
+
+#toggleCircleBtn.active{
+    background-color: #236C93;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.high-contrast .app-header{
+    background-color: black !important;
+    border: 2px solid white !important;
+}
+
+.high-contrast {
+    background-color: black !important;
+    color: white !important;
+}
+.high-contrast main{
+    border: solid 2px white !important;
+}
+
+.high-contrast section{
+    background-color: black !important;
+    color: white !important;
+    border: solid 2px white !important;
+}
+
+.high-contrast a {
+    background-color: black !important;
+    color: white !important;
+    border-style: dotted !important;
+}
+.high-contrast .btn-ghost {
+    background-color: black !important;
+    color: white !important;
+    border: 3px white dotted !important;
+}
+
+.high-contrast button:not(#menuBtn) {
+    background-color: black !important;
+    color: white !important;
+    border: 3px dotted white !important;
+}
+
+.high-contrast div{
+    background: black !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+.high-contrast span{
+    color: white !important;
+}
+
+.high-contrast .aufgabe {
+    border: 2px dotted white !important;
+}
+
+.high-contrast .erklarung {
+    border: 2px dotted white !important;
+}
+
+.high-contrast .beispiel {
+    border: 2px dotted white !important;
+}
+
+.high-contrast #search {
+    border: 2px dotted white !important;
+}
+
+.high-contrast input {
+    border: 3px solid white !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.high-contrast img {
+    filter: none !important;      /* remove any filter */
+    background-color: transparent !important; /* prevent overlay */
+}
+

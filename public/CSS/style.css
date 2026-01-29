@@ -1,0 +1,451 @@
+
+
+/* Header topmenu */
+.topmenu {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    margin-left: 18%;
+    border-radius: 10px;
+    border: 3px solid #236C93;
+    padding: 10px 20px;
+    width: 72%;
+    box-sizing: border-box;
+    background-color: #236C93;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+    left: 11%;
+}
+
+/* Thema */
+.topmenu h2
+{
+    flex: 1;                  /* nimmt mittleren Raum ein */
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    font-family: "Verdana", sans-serif;
+}
+
+ /* Titel zwischen dem Topmenü und Erklärungsbereich */
+.obere_teil .titel
+{
+    text-align: center;
+    margin: 0.7em auto;
+    font-family: "Verdana", sans-serif;
+    font-size: 2.7em;
+}
+
+.infos {
+    border: 4px solid #b1cbd9;   
+    background-color: #d8e5ec;   
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 20px auto;
+    font-family: "Verdana", sans-serif;  
+    color: #000;   
+    box-shadow: 0 4px 15px rgba(177, 203, 217, 0.5);   
+}
+
+/* Unterteilungen */
+.infos > div {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #fff;  
+    border-left: 6px solid #b1cbd9;   
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Titel (Span) formatieren */
+.infos span {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #236C93;
+    grid-column: 1 / span 2;
+}
+
+/* Textabsätze */
+.infos p
+{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+/*für Handy Ansicht*/
+@media (max-width: 600px) {
+    .infos {
+        width: 90%;
+        padding: 20px;
+    }
+    .infos > div {
+        padding: 12px 15px;
+    }
+    .infos span {
+        font-size: 1em;
+    }
+}
+
+.beispiel {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+
+
+.übung {
+    border: 4px solid #b1cbd9;   
+    background-color: #d8e5ec;   
+    padding: 25px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 40px auto 200px auto;
+    font-family: "Verdana", sans-serif;  
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(177, 203, 217, 0.5);     
+}
+
+.übung>span {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #236C93;  
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aufgabe {
+    background-color: white;
+    border-left: 6px solid #b1cbd9;  
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(177, 203, 217, 0.5);  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aufgabe p {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.aufgabe .loesung {
+    color: green;
+    font-size: 1.1em;
+    padding-left: 9em;
+    padding-right: 1em;
+    align-items: flex-end;
+}
+
+.aufgabe:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(177, 203, 217, 0.5);   
+}
+
+.aufgabe input {
+    width: 97%;      
+    padding: 10px;
+    border: 2px solid #b1cbd9;   
+    border-radius: 10px;
+    font-size: 1.2em;    
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.aufgabe input:focus {
+    border-color: #b1cbd9;
+}
+
+.pruf_gener_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.pruf_gener_container div {
+    margin-right: 10px;
+}
+
+.error{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 1.5em;
+    color : #236C93;
+}
+
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Farbliche Rückmeldung */
+.correct {
+    border-color: green !important;
+    border: 5px;
+    color: green;
+}
+.wrong {
+    border-color: red !important;
+    border: 5px;
+    color: red;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .übung {
+        width: 90%;
+        padding: 20px;
+    }
+    .aufgabe input {
+        font-size: 0.95em;
+    }
+}
+
+
+.high-contrast {
+    background-color: black !important;
+    color: white !important;
+}
+
+.high-contrast a {
+    background-color: black !important;
+    color: white !important;
+    border-style: dotted !important;
+}
+
+
+.high-contrast button:not(#menuBtn) {
+    background-color: black !important;
+    color: white !important;
+    border: 2px dotted white !important;
+}
+
+.high-contrast div{
+    background: black !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+.high-contrast span{
+    color: white !important;
+}
+
+.high-contrast .aufgabe {
+    border: 2px dotted white !important;
+}
+
+.high-contrast .erklärung {
+    border: 2px dotted white !important;
+}
+
+.high-contrast .beispiel {
+    border: 2px dotted white !important;
+}
+
+.high-contrast input {
+    border: 3px solid white !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+.high-contrast img {
+    filter: none !important;      /* remove any filter */
+    background-color: transparent !important; /* prevent overlay */
+}
+
+/*edit mode*/
+.edit-buttons {
+    margin-top: 10px;
+}
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+.edit-btn:hover {
+    background-color: #45a049;
+}
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+.add-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.add-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Additional styles for Thema page */
+
+/* Content sections */
+.content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    border-left: 6px solid #b1cbd9;
+    box-shadow: 0 3px 10px rgba(177, 203, 217, 0.3);
+}
+
+.content-section h2 {
+    color: #236C93;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #e9f6fb;
+    padding-bottom: 10px;
+}
+
+/* Form styling */
+.edit-form {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px dashed #b1cbd9;
+    border-radius: 10px;
+}
+
+.edit-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b1cbd9;
+    border-radius: 8px;
+    font-family: "Verdana", sans-serif;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 15px;
+}
+
+.edit-form textarea:focus {
+    outline: none;
+    border-color: #236C93;
+    box-shadow: 0 0 0 3px rgba(35, 108, 147, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.save-btn, .cancel-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.save-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background: #757575;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #616161;
+    transform: translateY(-2px);
+}
+
+/* No content message */
+.no-content {
+    color: #6b7780;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 2px dashed #ddd;
+}
+
+/* Success message */
+.success {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Image container */
+.image-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .save-btn, .cancel-btn {
+        width: 100%;
+    }
+}
+
